@@ -2,6 +2,7 @@ import { BtnPrimary } from "./components/atoms/button/BtnPrimary";
 import { BtnSecondary } from "./components/atoms/button/BtnSecondary";
 import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/organism/UserCard";
+import { HeaderOnly } from "./components/templates/HeaderOnly";
 import "./styles.css";
 
 const user = {
@@ -17,12 +18,12 @@ const user = {
 
 export default function App() {
   return (
-    <div className="App">
+    <HeaderOnly>
       <BtnPrimary>test</BtnPrimary>
       <BtnSecondary>検索</BtnSecondary>
       <br />
       <SearchInput />
       <UserCard user={user} />
-    </div>
+    </HeaderOnly>
   );
 }
